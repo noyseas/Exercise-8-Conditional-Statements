@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Example - Converter</title>
+  </head>
+  <body>
+    <div>
+      <h1>Simple Area converter Hectares to Square Meter/Feet/Mile</h1>
+      <h1>The value is:</h1>
+      <div>
+        <h2 id="display">----</h2>
+      </div>
+      <div
+        style="background-color: red; width: 500px; height: 100px; 3px solid;"
+      >
+        <br />
+        <form action="#" method="">
+          <input
+            type="number"
+            id="number"
+            placeholder="Enter a Number to Convert"
+          />
+
+          <select id="unit1">
+            <option id="unit1" value="1">Square meter</option>
+            <option id="unit1" value="2">Square Feet</option>
+            <option id="unit1" value="3">Hectares</option>
+          </select>
+          <select id="unit2">
+            <option id="unit2" value="1">Square meter</option>
+            <option id="unit2" value="2">Square Feet</option>
+            <option id="unit2" value="3">Hectares</option>
+          </select>
+          <button onclick="convertArea()">Convert Now</button>
+          <br />
+          <br />
+        </form>
+        <script>
+          function convertArea() {
+            let inputNum = document.getElementById("number").value;
+            let areaValue1 = document.getElementById("unit1").value;
+            let areaValue2 = document.getElementById("unit2").value;
+
+            if (areaValue1 == 1 && areaValue2 == 1) {
+              areaValue = "Same Unit Try Again";
+            } else if (areaValue1 == 1 && areaValue2 == 2) {
+              areaVal = Number(inputNum) * 10.76391; // Square meter to sqaure feet
+              areaValue =
+                inputNum +
+                " Square Meter is Equals to " +
+                areaVal +
+                " Square Feet";
+            } else if (areaValue1 == 1 && areaValue2 == 3) {
+              areaVal = Number(inputNum) * 0.0001; //sqaure meter to hectares
+              areaValue =
+                inputNum +
+                " Square Meter is Equals to " +
+                areaVal +
+                " Hectares";
+            } else if (areaValue1 == 2 && areaValue2 == 1) {
+              areaVal = Number(inputNum) * 0.092903; // square feet to square meter
+              areaValue =
+                inputNum +
+                " Square Feet is Equals to " +
+                areaVal +
+                " Square Meter";
+            } else if (areaValue1 == 2 && areaValue2 == 2) {
+              areaVal = Number(inputNum) * 0.092903; // square feet to square meter
+              areaValue = "Same Unit Try Again";
+            } else if (areaValue1 == 2 && areaValue2 == 3) {
+              parseFloat.areaVal = Number(inputNum) * 0.000009290303997; // square feet to hectares
+              areaValue =
+                inputNum + " Square Feet is Equals to " + areaVal + " Hectares";
+            } else if (areaValue1 == 3 && areaValue2 == 1) {
+              areaVal = Number(inputNum) * 10000; //hectares to square meter
+              areaValue =
+                inputNum +
+                " Hectares is Equals to " +
+                areaVal +
+                " Square Meter";
+            } else if (areaValue1 == 3 && areaValue2 == 2) {
+              areaVal = Number(inputNum) * 107639.104167; //hectares to sqaure feet
+              areaValue =
+                inputNum + " Hectares is Equals to " + areaVal + " Square Feet";
+            } else if (areaValue1 == 3 && areaValue2 == 3) {
+              areaValue = "Same Unit Try Again";
+            }
+
+            // let areaValue =
+            //   Number(inputNum) * Number(areaValue1) * Number(areaValue2);
+
+            document.getElementById("display").innerHTML = areaValue;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

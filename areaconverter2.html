@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Example - Converter</title>
+  </head>
+  <body>
+    <div>
+      <h1>Simple Area converter Hectares to Square Meter/Feet/Mile</h1>
+      <h1>The value is:</h1>
+      <div>
+        <h2 id="display">----</h2>
+      </div>
+      <div
+        style="background-color: red; width: 500px; height: 100px; 3px solid;"
+      >
+        <br />
+        <form action="#" method="">
+          <input
+            type="number"
+            id="num"
+            placeholder="Enter a number to convert"
+          />
+
+          <select id="unit1">
+            <option id="unit1" value="10000">Square meter</option>
+            <option id="unit1" value="107639">Square Feet</option>
+            <option id="unit1" value="0.003861">Hectare</option>
+          </select>
+          <select id="unit2">
+            <option id="unit2" value="10000">Square meter</option>
+            <option id="unit2" value="107639">Square Feet</option>
+            <option id="unit2" value="0.003861">Hectare</option>
+          </select>
+          <button onclick="convertArea()">Convert Now</button>
+          <br />
+          <br />
+        </form>
+        <script>
+          function convertArea() {
+            let inputNum = document.getElementById("number").value;
+            let unitValue1 = document.getElementById("unit1").value;
+            let unitValue2 = document.getElementById("unit2").value;
+
+            if (areaValue1 == areaValue2) {
+              areaValue = "Same unit,Please try again";
+            }
+            // } else if (unitValue1 == 10000 && unitValue2 == 107639) {
+            //   areaSqrFt = inputNum * unitValue1 * unitValue2;
+            //   areaValue =
+            //     inputNum +
+            //     "Square Mater " +
+            //     " is Equal to " +
+            //     areaSqrFt +
+            //     "Square Feet";
+            // } else if (unitValue1 == 10000 && unitValue2 == 0.003861) {
+            //   areaHec = inputNum * unitValue1 * unitValue2;
+            //   areaValue =
+            //     inputNum + "Square Mater " + " is Equal to " + areaHec;
+
+            // } else if ((areaValue2 = 107639 && unitValue1 == 10000)) {
+            //   areaHec = inputNum * unitValue1 * unitValue2;
+            //   areaValue =
+            //     inputNum +
+            //     "Square Feet " +
+            //     " is Equal to " +
+            //     areaSqrMtr +
+            //     "Hectare";
+            // } else if (unitValue2 == 107639 && unitValue1 == 0.003861) {
+            //   areaSqrMtr = inputNum * unitValue1 * unitValue2;
+            //   areaValue =
+            //     inputNum +
+            //     "Square Feet " +
+            //     " is Equal to " +
+            //     areaSqrMtr +
+            //     "Square Meter";
+            // }
+          }
+          alert(areaValue);
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
